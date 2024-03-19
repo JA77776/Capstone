@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <h1>Express API</h1>
+    <table>
+        <caption>
+            <h3>
+                Routes information
+            </h3>
+        </caption>
+        <thead>
+            <th>Routes</th>
+            <th>HTTP methods</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/</td>
+                <td>GET</td>
+                <td>Render an index.html</td>
+            </tr>
+            <tr>
+                <td colspan="3">Other routes are protected by middleware. You must login first.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>
+            <h3>
+                User routes
+            </h3>
+        </caption>
+        <thead>
+            <th>Routes</th>
+            <th>HTTP methods</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/</td>
+                <td>GET</td>
+                <td>To retrieve the data</td>
+            </tr>
+            <tr>
+                <td>/:id</td>
+                <td>GET</td>
+                <td>To retrieve specific data</td>
+            </tr>
+            <tr>
+                <td>/register</td>
+                <td>POST</td>
+                <td>To update the value</td>
+            </tr>
+            <tr>
+                <td>/:id/alterUser</td>
+                <td>PATCH</td>
+                <td>To update the data</td>
+            </tr>
+            <tr>
+                <td>/:id/deleteUser</td>
+                <td>DELETE</td>
+                <td>To delete the data</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>
+            <h3>
+                Products Routes
+            </h3>
+        </caption>
+        <thead>
+            <th>Routes</th>
+            <th>HTTP methods</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/</td>
+                <td>GET</td>
+                <td>To retrieve the products</td>
+            </tr>
+            <tr>
+                <td>/:id/getProduct</td>
+                <td>GET</td>
+                <td>To get a specific product</td>
+            </tr>
+            <tr>
+                <td>/addProduct</td>
+                <td>POST</td>
+                <td>To add the product/s</td>
+            </tr>
+            <tr>
+                <td>/:id/alterProduct</td>
+                <td>PATCH</td>
+                <td>To update the data of the product/s</td>
+            </tr>
+            <tr>
+                <td>/:id/deleteProduct</td>
+                <td>DELETE</td>
+                <td>To delete the product/s</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
