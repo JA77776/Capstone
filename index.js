@@ -1,6 +1,7 @@
 
 import { userRouter, express } from './controller/UserController.js'
 import { productRouter } from './controller/ProductsController.js'
+import { cartRouter } from './controller/CartController.js'
 import cookieParser  from 'cookie-parser' 
 import { errorHandling } from './middleware/ErrorHandeling.js'
 import  path  from 'path'
@@ -62,6 +63,7 @@ app.use(express.static('static'));
 
 app.use('/users', userRouter, express);
 app.use('/products', productRouter, express);
+app.use('/cart', cartRouter, express );
 app.use(errorHandling);
 
 app.listen(port, () => {

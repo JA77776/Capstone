@@ -48,8 +48,27 @@ function verifyToken(req, res, next) {
     }
 }
 
+function decodingToken (req, res, next) {
+
+    const token = req.header [AUTH_HEADER] || req.cookies.thisUser;
+    if (!token) {
+      return res.status(401).json({
+        msg: "Access denied. Token not provided",
+      });
+    }
+    const dec = jwt.verifyToken(token, SECRET_KEY);
+    if (!dec) {
+      return res.status(403).json({
+        msg: "Invalid token",
+      });
+    }
+    req.dec = dec;
+    next();
+  };
+
 export {
     createToken,
-    verifyToken
+    verifyToken,
+    decodingToken,
 };
 

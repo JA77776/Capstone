@@ -17,6 +17,6 @@ let connection = createPool({
     connectionLimit: 30
 })
 
-export{
+export {
     connection
-}
+};
