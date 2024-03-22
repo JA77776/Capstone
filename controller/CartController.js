@@ -16,7 +16,7 @@ cartRouter.get("/fetchCartItem", (req, res) => {
     Cart.fetchCartItems(user.userID, res);
 });
 
-cartRouter.post("/:addToCart", bodyParser.json(), async (req, res) => {
+cartRouter.post("/addToCart", bodyParser.json(), async (req, res) => {
 
     console.log("POST /cart request received");
 
@@ -35,7 +35,7 @@ getUserIDByEmail(userEmail)
   });
 });
 
-cartRouter.delete("/:removeFromCart", (req, res) => {
+cartRouter.delete("/removeFromCart", (req, res) => {
     const userEmail = req.dec.emailAdd;
     getUserIDByEmail(userEmail)
         .then((userID)=> {
